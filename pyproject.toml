@@ -1,0 +1,22 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[project]
+dependencies = []
+name = "projectA"
+requires-python = ">= 3.11"
+version = "0.1.0"
+
+[tool.hatch]
+[tool.hatch.build]
+targets.wheel.packages = [ "src/packageA" ]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["osx-arm64"]
+
+[tool.pixi.pypi-dependencies]
+projectA = { path = ".", editable = true }
+
+[tool.pixi.tasks]
