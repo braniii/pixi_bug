@@ -1,0 +1,3 @@
+"""Package B."""
+
+PACKAGE = "B"
