@@ -1,3 +1,0 @@
-"""Package B."""
-
-PACKAGE = "B"

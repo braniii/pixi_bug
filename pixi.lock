@@ -26,6 +26,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/tk-8.6.13-h010d191_3.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/tzdata-2025c-hc9c84f9_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstd-1.5.7-hbf9d68e_6.conda
+      - pypi: git+https://github.com/braniii/pixi_bug.git#8a1249e47425c34e2d7b19bb33d515a2ebb1f0a4
       - pypi: ./
 packages:
 - conda: https://conda.anaconda.org/conda-forge/osx-arm64/bzip2-1.0.8-hd037594_9.conda
@@ -143,10 +144,16 @@ packages:
   purls: []
   size: 3106008
   timestamp: 1775587972483
-- pypi: ./
-  name: projecta
+- pypi: git+https://github.com/braniii/pixi_bug.git#8a1249e47425c34e2d7b19bb33d515a2ebb1f0a4
+  name: packagea
   version: 0.1.0
-  sha256: 3ffb4df148789ee92d332f26de6e43c63cdf4f229ba53714dc1311c2d1a09233
+  requires_python: '>=3.11'
+- pypi: ./
+  name: packagec
+  version: 0.1.0
+  sha256: 33ecc43d190c480bc54ab7228627d81512380db9cd7311afd3561edabb24dc39
+  requires_dist:
+  - packagea @ git+https://github.com/braniii/pixi_bug.git@packageA
   requires_python: '>=3.11'
 - conda: https://conda.anaconda.org/conda-forge/osx-arm64/python-3.14.4-h4c637c5_100_cp314.conda
   build_number: 100

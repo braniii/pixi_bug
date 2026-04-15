@@ -1,0 +1,3 @@
+"""Package C."""
+
+PACKAGE = "C"
