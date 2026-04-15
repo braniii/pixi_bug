@@ -4,21 +4,21 @@ requires = ["hatchling"]
 
 [project]
 dependencies = ["packageA"]
-name = "packageB"
+name = "packageC"
 requires-python = ">= 3.11"
 version = "0.1.0"
 
 [tool.hatch]
 [tool.hatch.build]
-targets.wheel.packages = [ "src/packageB" ]
+targets.wheel.packages = [ "src/packageC" ]
 
 [tool.pixi.workspace]
 channels = ["conda-forge"]
 platforms = ["osx-arm64"]
 
 [tool.pixi.pypi-dependencies]
-packageB = { path = ".", editable = true }
-packageA = { git = "https://github.com/braniii/pixi_bug.git", branch = "packageA" }
+packageC = { path = ".", editable = true }
+packageA = "*"
 
 [tool.pixi.tasks]
 
