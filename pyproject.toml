@@ -21,7 +21,7 @@ platforms = ["osx-arm64", "linux-64"]
 
 [tool.pixi.pypi-dependencies]
 packageD = { path = ".", editable = true }
-packageA = "*"
+packageA = { git = "https://github.com/braniii/pixi_bug.git", branch = "packageA" }
 
 [tool.pixi.tasks]
 
